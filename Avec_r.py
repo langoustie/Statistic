@@ -54,8 +54,7 @@ if len(crossings) >= 2:
                        [chi2_grid[crossings[1]], chi2_grid[crossings[1] + 1]],
                        [r_grid[crossings[1]], r_grid[crossings[1] + 1]])
     uncertainty = (r_high - r_low) / 2
-    uncertaintyElarg: = uncertainty * 2
-    print(f"✅ Incertitude sur r : ±{uncertaintyElarg:.8f}")
+    print(f"✅ Incertitude sur r : {uncertainty:.8f} 68%")
 
     # === Étape 6 : Calcul de χ²(r₀ ± ε) ===
     r_plus = r_opt + uncertainty
